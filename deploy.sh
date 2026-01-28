@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-# ANSI color codes
+# ANSI colors
 RED="\033[0;31m"
 GREEN="\033[0;32m"
 YELLOW="\033[1;33m"
@@ -12,38 +12,53 @@ function error {
   exit 1
 }
 
+function info {
+  echo -e "${YELLOW}→ $1${RESET}"
+}
+
 function success {
   echo -e "${GREEN}✔ $1${RESET}"
 }
 
-# require a commit message
-if [ $# -eq 0 ]; then
-  error "Usage: ./deploy.sh \"Your commit message here\""
+# 1) Ensure we're in a git repo
+if ! git rev-parse --git-dir &>/dev/null; then
+  error "Not a git repository. Run 'git init', add a remote, and make your first commit."
 fi
 
-MSG="$1"
-
-# ensure we are on master
+# 2) Ensure we're on master
 CURRENT=$(git rev-parse --abbrev-ref HEAD)
 if [ "$CURRENT" != "master" ]; then
-  error "You must run this from the master branch (current: $CURRENT)"
+  error "You must run this from the master branch (current: $CURRENT)."
 fi
 
-echo -e "${YELLOW}Staging all changes…${RESET}"
+# 3) Prompt for commit message
+echo -ne "${YELLOW}Enter commit message: ${RESET}"
+read -r MSG
+if [ -z "$MSG" ]; then
+  error "Commit message cannot be empty."
+fi
+
+# 4) Stage all changes
+info "Staging changes..."
 git add .
 
-echo -e "${YELLOW}Committing with message:${RESET} \"$MSG\""
-git commit -m "$MSG" || error "Nothing to commit."
+# 5) Commit if there are staged changes
+if git diff --cached --quiet; then
+  info "No changes to commit."
+else
+  info "Committing: \"$MSG\""
+  git commit -m "$MSG" || error "Commit failed."
+fi
 
-echo -e "${YELLOW}Pushing master → origin/master…${RESET}"
-git push origin master || error "Failed to push master to origin/master."
+# 6) Push master → origin/master
+info "Pushing master → origin/master..."
+git push origin master || error "Failed to push to origin/master."
 
-# create or update gh-pages
-if git ls-remote --exit-code --heads origin gh-pages >/dev/null; then
-  echo -e "${YELLOW}Updating origin/gh-pages from master…${RESET}"
+# 7) Push master → origin/gh-pages (force)
+info "Updating origin/gh-pages from master..."
+if git ls-remote --exit-code --heads origin gh-pages &>/dev/null; then
   git push origin master:gh-pages --force || error "Failed to update gh-pages."
 else
-  echo -e "${YELLOW}Creating origin/gh-pages from master…${RESET}"
   git push origin master:gh-pages || error "Failed to create gh-pages."
 fi
 
