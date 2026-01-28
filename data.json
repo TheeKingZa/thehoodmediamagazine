@@ -5,15 +5,15 @@
   },
   "articles": [
     {
-      "title": "The Urban Canvas: Street Art in the 21st Century",
-      "description": "How walls speak louder than words. We explore the murals transforming neighborhoods around the world.",
+      "title": "Album Breakdown",
+      "description": "VEE FX ",
       "image": "./images/THMM/logo.jpeg",
-      "link": "articles/urban-canvas.html"
+      "link": "https://www.instagram.com/p/DRm1G_iDWcn/?utm_source=ig_web_button_native_share&igsh=NTc4MTIwNjQ2YQ%3D%3D"
     },
     {
       "title": "Beats & Rhymes: The Evolution of Hip-Hop",
       "description": "From block parties to global phenomenon—trace the history and future of hip-hop culture.",
-      "image": "./images/THMM/logo.jpeg",
+      "image": "./images/Issues/mag2.jpg",
       "link": "articles/hiphop-evolution.html"
     },
     {
