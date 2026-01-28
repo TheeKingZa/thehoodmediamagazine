@@ -1,0 +1,26 @@
+{
+  "issue": {
+    "month": "January",
+    "year": 2026
+  },
+  "articles": [
+    {
+      "title": "The Urban Canvas: Street Art in the 21st Century",
+      "description": "How walls speak louder than words. We explore the murals transforming neighborhoods around the world.",
+      "image": "./images/THMM/logo.jpeg",
+      "link": "articles/urban-canvas.html"
+    },
+    {
+      "title": "Beats & Rhymes: The Evolution of Hip-Hop",
+      "description": "From block parties to global phenomenon—trace the history and future of hip-hop culture.",
+      "image": "./images/THMM/logo.jpeg",
+      "link": "articles/hiphop-evolution.html"
+    },
+    {
+      "title": "Fashion Forward: Street Style Trends",
+      "description": "The looks that started on the sidewalk and took over the runway.",
+      "image": "./images/THMM/logo.jpeg",
+      "link": "articles/street-style.html"
+    }
+  ]
+}
