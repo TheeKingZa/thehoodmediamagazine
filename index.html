@@ -2,132 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THE HOOD MEDIA MAGAZINE</title>
-
-  <!-- Favicon -->
-   <link rel="shortcut icon" href="./images/THMM/logo.jpeg" type="image/x-icon">
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>THE HOOD MEDIA | Services & Articles</title>
+  <link rel="shortcut icon" href="./images/THMM/logo.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="root.css">
-
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
-    <h1 class="logo">THE HOOD MEDIA MAGAZINE</h1>
-    <nav class="main-nav">
-      <a href="#">Home</a>
-      <a href="#culture">Culture</a>
-      <a href="#music">Music</a>
-      <a href="#style">Style</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="header-inner">
+      <h1 class="logo">THE HOOD MEDIA MAGAZINE</h1>
+      <nav class="main-nav">
+        <a href="#services">Services</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your One-Stop Media Shop</h2>
+      <p>We specialize in Photoshoots, Videoshoots, Posters, Cover Arts & more.</p>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+    <div class="hero-image">
+      <img src="./images/THMM/logo.jpeg" alt="Media Services">
+    </div>
+  </section>
+
   <main>
-    <section class="hero">
-      <h2>Welcome to the cutting edge of street culture</h2>
-      <p>Dive into art, music, fashion and ideas that shape our hood.</p>
-      <p class="issue-date">Issue Date: <span id="issue-date">Loading…</span></p>
+    <!-- SERVICES -->
+    <section id="services" class="category-section services">
+      <h2>Our Services</h2>
+      <div class="grid" id="services-container"></div>
     </section>
 
-    <!-- will get filled by app.js -->
-    <section class="articles" id="articles">
-      <!-- dynamic cards here -->
+    <!-- ARTICLES -->
+    <section id="articles" class="category-section articles-section">
+      <h2>Featured Articles</h2>
+      <div class="grid" id="articles-container"></div>
     </section>
-    <!-- END OF CARDS -->
 
-
-    <!-- CULTURE -->
-  <section class="category-section culture" id="culture">
-    <h2>Culture</h2>
-    <div class="articles">
-      <article class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Graffiti">
-        <h3>The Global Graffiti: Voices in Color</h3>
-        <p>How spray can art has become the mouthpiece of marginalized communities.</p>
-        <a class="read-more" href="#">Read more →</a>
-      </article>
-      <article class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Community Stories">
-        <h3>Community Stories: People Power</h3>
-        <p>Profiles of grassroots leaders making change in their neighborhoods.</p>
-        <a class="read-more" href="#">Read more →</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- MUSIC -->
-  <section class="category-section music" id="music">
-    <h2>Music</h2>
-    <div class="articles">
-      <article class="card">
-        <img src="https://via.placeholder.com/300x200" alt="UK Garage Revival">
-        <h3>Underground Beats: UK Garage Revival</h3>
-        <p>The sound that shook London clubs is back—and better than ever.</p>
-        <a class="read-more" href="#">Read more →</a>
-      </article>
-      <article class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Vinyl Vibes">
-        <h3>Vinyl Vibes: The Return of Records</h3>
-        <p>Why a generation raised on streaming is hunting down turntables again.</p>
-        <a class="read-more" href="#">Read more →</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- STYLE -->
-  <section class="category-section style" id="style">
-    <h2>Style</h2>
-    <div class="articles">
-      <article class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Sneaker Culture">
-        <h3>Sneaker Culture: Beyond the Court</h3>
-        <p>From rare drops to resale empires—why kicks are the ultimate status symbol.</p>
-        <a class="read-more" href="#">Read more →</a>
-      </article>
-      <article class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Urban Wardrobe">
-        <h3>Urban Wardrobe: Mixing High & Street</h3>
-        <p>How designers are fusing runway luxe with block-party grit.</p>
-        <a class="read-more" href="#">Read more →</a>
-      </article>
-    </div>
-  </section>
-
-
-
-
-  </main>
-
-<!-- CONTACT INFO SECTION -->
-  <section class="contact" id="contact">
-    <div class="contact-inner">
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
       <h2>Get in Touch</h2>
-      <p>We’d love to hear from you—whether it’s feedback, story ideas or just a shout-out.</p>
       <ul class="contact-list">
         <li><strong>Email:</strong> <a href="mailto:contact@thehoodmedia.com">contact@thehoodmedia.com</a></li>
-        <li><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+        <li><strong>Phone:</strong> <a href="tel:0604369841">+27 60 436 9841</a></li>
         <li><strong>Address:</strong> 123 Hood St, Suite 100, Your City, ST 12345</li>
-        <li><strong>Instagram:</strong> <a href="https://instagram.com/thehoodmedia" target="_blank">@thehoodmedia</a></li>
-        <li><strong>Twitter:</strong> <a href="https://twitter.com/hoodmedia" target="_blank">@hoodmedia</a></li>
+        <li><a href="https://www.instagram.com/hoodmediamagazine/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100084848285227https://www.facebook.com/profile.php?id=100084848285227" target="_blank">Facebook</a></li>
       </ul>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  
-
-
+  <!-- FOOTER & BACK TO TOP -->
   <footer class="site-footer">
-    <p>THE HOOD MEDIA MAGAZINE © <span id="year"></span></p>
+    <p>THE HOOD MEDIA © <span id="year"></span></p>
   </footer>
-
-    <!-- Back to top button -->
   <button id="backToTop" title="Back to top">↑</button>
 
-
-  <!-- js -->
-  <script defer src="./app.js"></script>
-   <script defer src="./date.js"></script>
-   <script defer src="./scroll.js"></script>
+  <!-- SCRIPTS -->
+  <script defer src="date.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="scroll.js"></script>
 </body>
 </html>

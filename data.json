@@ -1,26 +1,57 @@
 {
-  "issue": {
-    "month": "January",
-    "year": 2026
-  },
+  "services": [
+    {
+      "name": "Photoshoot",
+      "description": "Capture stunning, high-resolution images for brands, products or personal portfolios.",
+      "image": "./images/THMM/logo.jpeg",
+      "link": "services/photoshoot.html"
+    },
+    {
+      "name": "Videoshoot",
+      "description": "Full-scale video production: promos, documentaries, interviews and event coverage.",
+      "image": "./images/THMM/logo.jpeg",
+      "link": "services/videoshoot.html"
+    },
+    {
+      "name": "Event Posters",
+      "description": "Eye-catching posters and flyers tailored for concerts, parties or corporate events.",
+      "image": "./images/THMM/logo.jpeg",
+      "link": "services/event-posters.html"
+    },
+    {
+      "name": "Cover Arts",
+      "description": "Bold album and book covers that tell your story at a glance.",
+      "image": "./images/THMM/logo.jpeg",
+      "link": "services/cover-arts.html"
+    },
+    {
+      "name": "Funeral Posters",
+      "description": "Respectful, elegant memorial posters designed with care.",
+      "image": "./images/THMM/logo.jpeg",
+      "link": "services/funeral-posters.html"
+    }
+  ],
   "articles": [
     {
       "title": "Album Breakdown",
-      "description": "VEE FX ",
-      "image": "./images/THMM/logo.jpeg",
-      "link": "https://www.instagram.com/p/DRm1G_iDWcn/?utm_source=ig_web_button_native_share&igsh=NTc4MTIwNjQ2YQ%3D%3D"
+      "description": "We explore the murals transforming neighborhoods around the world.",
+      "image": "./images/Issues/VeeFx_Nov.jpg",
+      "link": "articles/urban-canvas.html",
+      "date": { "month": "January", "year": 2025 }
     },
     {
       "title": "Beats & Rhymes: The Evolution of Hip-Hop",
-      "description": "From block parties to global phenomenon—trace the history and future of hip-hop culture.",
-      "image": "./images/Issues/mag2.jpg",
-      "link": "articles/hiphop-evolution.html"
+      "description": "Trace the history and future of hip-hop culture, from block parties to global phenomenon.",
+      "image": "./images/Issues/Smoke.jpg",
+      "link": "articles/hiphop-evolution.html",
+      "date": { "month": "February", "year": 2026 }
     },
     {
       "title": "Fashion Forward: Street Style Trends",
       "description": "The looks that started on the sidewalk and took over the runway.",
-      "image": "./images/THMM/logo.jpeg",
-      "link": "articles/street-style.html"
+      "image": "./images/Issues/Kayclaude.jpg",
+      "link": "articles/street-style.html",
+      "date": { "month": "March", "year": 2026 }
     }
   ]
 }

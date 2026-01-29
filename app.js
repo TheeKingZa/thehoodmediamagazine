@@ -1,43 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
   fetch("data.json")
-    .then(res => {
-      if (!res.ok) throw new Error("Could not load data.json");
-      return res.json();
-    })
+    .then(r => r.ok ? r.json() : Promise.reject("Failed to load data.json"))
     .then(data => {
-      renderIssueDate(data.issue);
-      renderArticles(data.articles);
+      renderGrid("services-container", data.services, "name", "description", "image", "link", "Learn more →");
+      renderArticles("articles-container", data.articles);
     })
-    .catch(err => {
-      console.error(err);
-      document.getElementById("issue-date").textContent = "—";
-    });
+    .catch(console.error);
 });
 
-function renderIssueDate(issue) {
-  // Build “Month Day, Year” or fallback to “Month Year”
-  let parts = [];
-  if (issue.month) parts.push(issue.month);
-  if (issue.day)   parts.push(issue.day);
-  if (issue.year)  parts.push(issue.year);
-  // Join with spaces, but if day is missing it becomes “Month Year”
-  const dt = parts.join(issue.day ? " " : " ");
-  document.getElementById("issue-date").textContent = dt;
+function renderGrid(containerId, items, titleKey, descKey, imgKey, linkKey, linkText) {
+  const c = document.getElementById(containerId);
+  c.innerHTML = "";
+  items.forEach(item => {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${item[imgKey]}" alt="${item[titleKey]}">
+      <h3>${item[titleKey]}</h3>
+      <p>${item[descKey]}</p>
+      <a href="${item[linkKey]}">${linkText}</a>
+    `;
+    c.appendChild(card);
+  });
 }
 
-function renderArticles(articles) {
-  const container = document.getElementById("articles");
-  container.innerHTML = "";  // clear any placeholder
-
+function renderArticles(containerId, articles) {
+  const c = document.getElementById(containerId);
+  c.innerHTML = "";
   articles.forEach(a => {
+    let dateHtml = "";
+    if (a.date && a.date.month && a.date.year) {
+      dateHtml = `<span class="article-date">${a.date.month} ${a.date.year}</span>`;
+    }
     const card = document.createElement("article");
     card.className = "card";
     card.innerHTML = `
       <img src="${a.image}" alt="${a.title}">
       <h3>${a.title}</h3>
+      ${dateHtml}
       <p>${a.description}</p>
-      <a class="read-more" href="${a.link}">Read more →</a>
+      <a href="${a.link}">Read more →</a>
     `;
-    container.appendChild(card);
+    c.appendChild(card);
   });
 }
