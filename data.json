@@ -4,54 +4,54 @@
       "name": "Photoshoot",
       "description": "Capture stunning, high-resolution images for brands, products or personal portfolios.",
       "image": "./images/THMM/logo.jpeg",
-      "link": "services/photoshoot.html"
+      "link": "index.html"
     },
     {
       "name": "Videoshoot",
       "description": "Full-scale video production: promos, documentaries, interviews and event coverage.",
       "image": "./images/THMM/logo.jpeg",
-      "link": "services/videoshoot.html"
+      "link": "index.html"
     },
     {
       "name": "Event Posters",
       "description": "Eye-catching posters and flyers tailored for concerts, parties or corporate events.",
       "image": "./images/THMM/logo.jpeg",
-      "link": "services/event-posters.html"
+      "link": "index.html"
     },
     {
       "name": "Cover Arts",
       "description": "Bold album and book covers that tell your story at a glance.",
       "image": "./images/THMM/logo.jpeg",
-      "link": "services/cover-arts.html"
+      "link": "services/c#"
     },
     {
       "name": "Funeral Posters",
       "description": "Respectful, elegant memorial posters designed with care.",
       "image": "./images/THMM/logo.jpeg",
-      "link": "services/funeral-posters.html"
+      "link": "index.html"
     }
   ],
   "articles": [
     {
       "title": "Album Breakdown",
-      "description": "We explore the murals transforming neighborhoods around the world.",
+      "description": "The Album Breakdown with VEE FX.",
       "image": "./images/Issues/VeeFx_Nov.jpg",
-      "link": "articles/urban-canvas.html",
-      "date": { "month": "January", "year": 2025 }
+      "link": "https://www.instagram.com/p/DRm1G_iDWcn/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      "date": { "month": "November", "year": 2025 }
     },
     {
-      "title": "Beats & Rhymes: The Evolution of Hip-Hop",
-      "description": "Trace the history and future of hip-hop culture, from block parties to global phenomenon.",
+      "title": "CCF2025. Heilbron, Freestate Province",
+      "description": "tsane tse fly ska mabana, still in the vip but we outside!.",
       "image": "./images/Issues/Smoke.jpg",
-      "link": "articles/hiphop-evolution.html",
-      "date": { "month": "February", "year": 2026 }
+      "link": "https://www.instagram.com/p/DSorRqyiFVl/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
+      "date": { "month": "December", "year": 2025 }
     },
     {
-      "title": "Fashion Forward: Street Style Trends",
-      "description": "The looks that started on the sidewalk and took over the runway.",
+      "title": "Kayclaude",
+      "description": "Lets All Go have a listen.",
       "image": "./images/Issues/Kayclaude.jpg",
-      "link": "articles/street-style.html",
-      "date": { "month": "March", "year": 2026 }
+      "link": "https://www.instagram.com/reel/DT7XZKwira2/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
+      "date": { "month": "January", "year": 2026 }
     }
   ]
 }
